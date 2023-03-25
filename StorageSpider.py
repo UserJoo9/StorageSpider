@@ -179,7 +179,7 @@ if __name__ == "__main__":
                     print(ss.layerSearch(ss.absPath))
                 else:
                     print("\nUnknown choice!\n")
-            elif choose.isdecimal():
+            elif choose.isdecimal() and os.path.isdir(ss.absPath):
                 try:
                     ss.absPath += "\\" + os.listdir(ss.absPath)[int(choose)]
                     if os.path.isdir(ss.absPath):
